@@ -32,6 +32,7 @@ int main()
         theBalancer.add(gen);
     }
 
+    cout << "starting size" << theBalancer.rQueue.size() << endl;
     for (int j = 0; j < serverCount; j++) /*< add the requests to the array of webservers with names*/
     {
         webServer web((char)(j + 65));
@@ -62,7 +63,9 @@ int main()
     {
         if (theServers[i].r.time != 0)
         {
-            cout << "Requests left";
+            // cout << "Requests left" << endl;
         }
     }
+
+    cout << "ending size" << theBalancer.rQueue.size() << endl;
 }
